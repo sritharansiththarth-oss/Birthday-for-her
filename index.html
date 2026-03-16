@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday ❤️</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(to right,#ff9a9e,#fad0c4);
+font-family:Arial;
+text-align:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+background:rgba(255,255,255,0.2);
+padding:40px;
+border-radius:20px;
+}
+
+h1{
+font-size:45px;
+margin-bottom:10px;
+}
+
+.decor{
+font-size:40px;
+margin:10px 0;
+}
+
+a{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:white;
+color:#ff4d6d;
+text-decoration:none;
+font-size:20px;
+border-radius:25px;
+}
+
+.balloon{
+position:absolute;
+font-size:40px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-800px);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="decor">🎈 🌸 🎂 🌸 🎈</div>
+
+<h1>HAPPY BIRTHDAY ANUKU MA🎂</h1>
+
+<p>
+Today is your special day ❤️
+</p>
+
+<p>
+I made a small birthday letter for you.
+</p>
+
+<p> I LOVE YOU SO MUCH </p>
+
+<div class="decor">🎂 🎉 🌸 🎈</div>
+
+<a href="birthday.html">
+Click here to open your birthday letter 💌
+</a>
+
+</div>
+
+<script>
+
+/* floating balloons */
+
+function createBalloon(){
+
+const balloon=document.createElement("div");
+
+balloon.className="balloon";
+
+const icons=["🎈","🎂","🌸","🎉"];
+
+balloon.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+
+balloon.style.left=Math.random()*window.innerWidth+"px";
+
+balloon.style.bottom="0px";
+
+document.body.appendChild(balloon);
+
+setTimeout(()=>{
+balloon.remove();
+},6000);
+
+}
+
+setInterval(createBalloon,800);
+
+</script>
+
+</body>
+</html>
 
